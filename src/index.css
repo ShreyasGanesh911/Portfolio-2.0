@@ -19,6 +19,13 @@ body{
   
 }
 
+body{
+  background-color: rgb(24,24,24);
+}
+.bg-dark{
+  background-color: rgb(24,24,24);
+}
+
 .displayFlex{
   display: flex;
   justify-content: center;
