@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <>
      <nav className=' sticky top-0 bg-black  overflow-hidden' style={{width:'99vw'}}>
-      <div className=' bg-red-500 flex items-center h-28 text-white justify-between'>
+      <div className=' bg-dark flex items-center h-28 text-white justify-between'>
        <div className="w-16 ml-14">
        <Link to="/"><img src="https://raw.githubusercontent.com/ShreyasGanesh911/Portfolio/master/src/WebLogo.jpeg" className="object-contain" alt="" /></Link>
        </div>

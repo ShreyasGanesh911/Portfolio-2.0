@@ -3,7 +3,7 @@ import React from 'react'
 export default function About() {
   return (
     <>
-    <section id='about' className='page bg-black text-white flex items-center justify-around'>
+    <section id='about' className='page bg-dark text-white flex items-center justify-around'>
 
       <div className='h-full w-1/3 border' style={{height:'60vh'}}>
       About

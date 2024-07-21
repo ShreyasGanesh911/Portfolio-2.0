@@ -6,7 +6,7 @@ const lib = ['HTML','CSS','Tailwind CSS','Framer motion','React','Flask','Node J
 const tools = ["MYSQL","Mongo DB"]
 export default function Skills() {
   return (
-    <section id='skills' className='page bg-slate-900 text-white flex items-center justify-start flex-col'>
+    <section id='skills' className='page bg-dark text-white flex items-center justify-start flex-col'>
       <h1 className='w-11/12 text-4xl p-2 text-start '>Skills</h1>
         <div className='w-3/4 '>
         <p className='text-lg'>
@@ -15,7 +15,7 @@ export default function Skills() {
         </p>
         </div>
 
-      <div className='w-3/5 h-96 border rounded border-gray-900 bg-black  font-mono '>
+      <div className='w-3/5 h-96 border rounded border-gray-900   font-mono ' style={{backgroundColor:"rgb(32,32,32)"}}>
           <div className='w-100 flex'>
             <motion.div className='w-1/6 h-32 displayFlex' whileHover={{color:'yellow'}}>
               Languages

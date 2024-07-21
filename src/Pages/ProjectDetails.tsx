@@ -1,37 +1,59 @@
-import React from 'react'
+// import React, { useEffect, useState } from 'react'
 import Card from '../Components/Card'
-const tools = ['React','Mongo DB','Express Js','Node Js']
+import projectDescription from '../Constants/projectDesc.json'
+import { useLocation } from 'react-router-dom'
+import SwiperMod from '../Components/Swiper'
+type Path = keyof typeof projectDescription
 export default function ProjectDetails() {
+  const location = useLocation()
+  // const [title,setTitle] = useState<keyof typeof projectDescription>()
+  let title = 'KickStreet' as keyof typeof projectDescription
+  let  namePath
+  // useEffect(()=>{
+  //     namePath = location.pathname.split("/")[2] as Path || "kickstreet"
+  //   console.log(namePath)
+  //   if(namePath)
+  //     setTitle(namePath)
+  // },[])
   return (
-    <section className='page bg-slate-900 border relative'>
+    <section className='page  relative bg-dark' >
 
       <div className='fixed bg-black w-48 h-28 bottom-10 right-10 text-white'>
         <p className='w-full m-2'>Next project <i className="fa-solid fa-arrow-right ml-1"></i></p>
         <p className='w-full m-2 text-xl'>Kick Street</p>
       </div>
-      <div className='w-full h-48 bg-red-50 flex justify-center pl-16 items-start flex-col'>
-          <p className='text-6xl w-3/4'>Project title</p>
-          <p className='w-1/6 text-right font-mono'>20-July-2024</p>
+
+
+      <div className='w-full h-48 text-white flex justify-center pl-16 items-start flex-col'>
+          <p className='text-6xl w-1/4 pb-1 border-b decoration-2 '>{projectDescription[title!].Title}</p>
+          <p className='w-1/6 text-right text-xl pt-1 font-mono'>{projectDescription[title!].date}</p>
 
       </div>
-      <div className='w-full bg-yellow-200 border flex items-center flex-col'>
 
-        <div className='w-5/6 h-96 bg-slate-500'>
-            <p className='w-1/3 text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, cum qui tempore est dicta nam eveniet. Consectetur at nemo amet odit sapiente dolorem nobis placeat optio quis expedita temporibus maiores, doloremque alias maxime reiciendis doloribus voluptate beatae officia fugit, excepturi ipsum perferendis minima nostrum! Maxime fugiat eligendi ipsum iste tenetur, consectetur recusandae vel. Maiores voluptates sunt, repellat saepe excepturi qui.</p>
+
+
+      <div className='w-full   flex items-center flex-col'>
+
+        <div className='w-5/6 h-80 text-white flex items-center pl-16 '>
+            <p className='w-1/3 text-justify text-lg font-sans '>{projectDescription[title].Description}</p>
         </div>
 
-        <div className='w-5/6 h-96 bg-pink-300 displayFlex py-2'>
-            <div className='w-3/4 h-full border '> </div>
-        </div>
-
-
-        <div className='w-5/6 h-96 bg-indigo-500 text-white'>
-            <div className='flex flex-wrap w-3/4 text-white'>
-                {tools.map(e=><Card name={e}/>)}
+        <div className='w-5/6 h-96  displayFlex my-5 py-2 '  style={{height:"60vh"}}>
+            <div className='w-3/4 h-full  '> 
+              <SwiperMod images={projectDescription[title].pictures}/>
             </div>
         </div>
-        <div className='w-5/6 h-96 bg-violet-500 text-white'>
-            <button className='py-2 px-1 border'>Project source code</button>
+
+
+        <div className='w-5/6 h-96  text-white displayFlex flex-col'>
+          <h1 className='w-3/4 font-mono text-2xl'>Tools Used</h1>
+            <div className='flex flex-wrap w-3/4 h-1/2 justify-between items-center text-white'>
+                {projectDescription[title].stack.map(e=><Card name={e}/>)}
+            </div>
+        </div>
+        
+        <div className='w-5/6 h-40  text-white'>
+            <button className='py-2 px-1 border'><a href={projectDescription[title].ProjectLink}  rel="noreferrer" target='_blank'>Project source code</a></button>
         </div>
 
       </div>
