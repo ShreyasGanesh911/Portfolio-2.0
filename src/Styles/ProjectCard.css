@@ -1,0 +1,22 @@
+@media only screen and (max-width: 600px) {
+    #projectCardContainer {
+        width: 90vw !important;
+        overflow: hidden;
+    }
+    #projectCardImg{
+        width: 100% !important;
+        
+
+    }
+  }
+
+
+#projectCardImg{
+    height:auto;
+    width:60vw;
+  }
+
+#projectCardContainer{
+    width:80vw;
+    height:auto
+}
