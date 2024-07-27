@@ -1,25 +1,26 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 
 export default function About() {
   return (
     <>
-    <section id='about' className='page bg-dark text-white flex items-center justify-around'>
+    <section id='about' className='page bg-pink-200 aboutPage relative text-white flex items-center justify-around'>
+      <div className='absolute bg-dark w-full h-full opacity-85'></div>
+      <motion.div  whileInView={{x:0,scale:1,opacity:1}}  initial={{x:200,opacity:0}} viewport={{once:true}} transition={{stiffness:0}} className=' z-10 h-full w-1/3  flex flex-col justify-center' style={{height:'60vh'}}>
+      <h1 className='font-semibold text-3xl p-3 text-red-400'>About</h1>
+      <motion.p  className='text-justify font-semibold text-lg w-full p-3 displayFlex '>
+      I'm an arising web developer based in Bengaluru. I am a third-year student at RV Institute Of Technology And Management, Bengaluru, majoring in information science. The ability to create software that solves real-world problems and enhances user experiences has always captivated my imagination drives my excitement and passion for web development. I have some experience in web development, and I'm seeking for internships to test my abilities.
 
-      <div className='h-full w-1/3 border' style={{height:'60vh'}}>
-      About
-      <p className='text-justify'>
-      I'm an arising web developer based in Bengaluru. I am a third-year student at RV Institute Of Technology And Management, Bengaluru, majoring in information science. The ability to create software that solves real-world problems and enhances user experiences has always captivated my imagination . I have some experience in web development, and I'm seeking for internships to hone my abilities.
+      </motion.p>
 
-      </p>
-
-      <div className='w-2/5 flex justify-evenly  '>
-          <button className='border rounded px-1 py-2'><i className="fa-solid fa-file mx-1"></i>Resume</button>
-          <button className='border rounded px-1 py-2'><i className="fa-brands fa-github  mx-1"></i>Github</button>
+      <div className='w-full flex  mt-5 px-3 '>
+          <button className='border rounded px-1 w-32 py-2'><i className="fa-solid fa-file mx-1"></i>Resume</button>
+          <button className='border rounded px-1 w-32 py-2 mx-10'><i className="fa-brands fa-github  mx-1"></i>Github</button>
 
       </div>
-      </div>
-      <div className='h-full w-1/3 border displayFlex' style={{height:'60vh'}}>
-      <div className='h-96 w-96 bg-yellow-300'></div>
+      </motion.div>
+      <div className='h-full w-1/3  displayFlex z-10' style={{height:'60vh'}}>
+        <div className='h-96 w-96 bg-yellow-300'></div>
      </div>
       </section> 
     </>

@@ -9,7 +9,7 @@ type Props = {
 export default function ProjectCard({projectName,projectLink,navLink}:Props) {
   return (
     <>
-      <motion.div id='projectCardContainer'  whileInView={{x:0,scale:1}}  initial={{x:100,scale:0.5}} viewport={{once:true}} transition={{stiffness:0}} className=' my-10 w-full  rounded-xl 2xl:w-3/5 xl:w-2/3 2xl:h-96 sm:h-72 sm:flex   items-center'>
+      <motion.div id='projectCardContainer'  whileInView={{x:0,scale:1}}  initial={{x:100,scale:0.8}} viewport={{once:true}} transition={{stiffness:0}} className=' my-10 w-full  rounded-xl 2xl:w-3/5 xl:w-2/3 2xl:h-96 sm:h-72 sm:flex   items-center'>
         
           <motion.div id='projectCardImg' whileHover={{scale:0.98}} className=' bg-yellow-200  displayFlex z-0 ' >
           <img className='w-full h-full object-contain' src="https://raw.githubusercontent.com/ShreyasGanesh911/kick-street/master/src/Assets/Readme/desktop-home.png" alt="" />

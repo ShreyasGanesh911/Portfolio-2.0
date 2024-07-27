@@ -1,11 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* *{
   cursor: none;
 } */
 html {
   scroll-behavior: smooth;
+}
+*{
+  padding: 0;
+  margin: 0;
 }
 body{
   padding: 0;
@@ -20,6 +25,7 @@ body{
   
 }
 
+
 body{
   background-color: rgb(24,24,24);
 }
@@ -33,3 +39,15 @@ body{
   align-items: center;
 }
 
+.aboutPage{
+  /* background: url(./Assets/codePic.png) no-repeat center center ; */
+  background: url(./Assets/codePic.png)  ;
+  background-position: right 200px  top 250px;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  
+  background-color: rgb(24 24 24 / 75%);
+    /* background-blend-mode: lighten; */
+    
+  
+}
