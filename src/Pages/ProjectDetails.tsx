@@ -25,7 +25,7 @@ export default function ProjectDetails() {
 
 
       <div className='w-full h-48 text-white flex justify-center pl-16 items-start flex-col'>
-          <p className='text-6xl w-1/4 pb-1 border-b decoration-2 hover:text-yellow-400 hover:border-yellow-400 '>{projectDescription[title].Title}</p>
+          <p className='text-6xl w-1/4 pb-1 border-b decoration-2  hover:border-red-400 text-red-400'>{projectDescription[title].Title}</p>
           <p className='w-1/6 text-right text-xl pt-1 font-mono hover:text-green-600'>{projectDescription[title].date}</p>
 
       </div>
@@ -46,7 +46,7 @@ export default function ProjectDetails() {
 
 
         <div className='w-5/6 h-96  text-white displayFlex flex-col'>
-          <h1 className='w-3/4 font-mono text-2xl'>Tools Used</h1>
+          <h1 className='w-3/4 font-mono text-2xl text-red-400'>Tools Used</h1>
             <div className='flex flex-wrap w-3/4 h-1/2 justify-between items-center text-white'>
                 {projectDescription[title].stack.map(e=><Card name={e}/>)}
             </div>

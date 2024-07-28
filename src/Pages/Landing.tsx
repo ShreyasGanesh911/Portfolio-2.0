@@ -1,27 +1,33 @@
 import { motion } from 'framer-motion'
-import React, { useEffect, useState } from 'react'
+import DrawContainer from '../Components/Landing/DrawContainer'
 
 export default function Landing() {
-  // const [mouse,setMouse] = useState({x:0,y:0})
-  // useEffect(()=>{
-  //   const myFunc = (e:MouseEvent)=>setMouse({x:e.clientX-25,y:e.clientY-25})
-  //   window.addEventListener('mousemove',myFunc)
-  //   return ()=>{
-  //     window.removeEventListener('mousemove',myFunc)
-  //   }
-  // },[])
+  const name = 'SHREYAS'
   return (
     <>
-     <section id='landing' className='page bg-dark text-white flex items-start pt-28 justify-around'>
-      {/* <motion.div animate={{x:mouse.x,y:mouse.y}} transition={{duration:0,delay:0}} style={{height:50,width:50}}  className=' rounded-full fixed top-0 left-0 bg-yellow-300 pointer-events-none'/> */}
-      <div className='h-full w-1/3 border ' style={{height:'60vh'}}>
-        Name div
-      </div>
-      <div className='h-full w-1/3 border displayFlex' style={{height:'60vh'}}>
-        <motion.div  className='h-96 w-96 bg-yellow-300'></motion.div>
+     <section id='landing' className='page bg-dark relative text-white displayFlex'>
+      <DrawContainer/>
+     <div className='z-10 sm:w-auto h-96 w-full border flex justify-start items-center pt-5 flex-col'>
+        <p className='sm:w-full w-5/6 text-2xl'>
+          <motion.span 
+            viewport={{once:true}} initial={{scale:9,x:100,opacity:0}} whileInView={{scale:1,x:0,opacity:1}}  
+            className=' text-red-400 sm:text-3xl text-4xl mr-5'>Hello
+          </motion.span> 
+        <motion.span 
+            viewport={{once:true}} initial={{scale:9,x:100,opacity:0}} transition={{delay:0.3}} whileInView={{scale:1,x:0,opacity:1}} >I'm</motion.span>
+        </p>
+          <div className='mt-5 sm:mt-0'>
+        {name.split('').map((e,i)=>
+        <motion.span 
+        viewport={{once:true}} initial={{scale:0.9,x:100,opacity:0}} transition={{delay:0.6}} whileInView={{scale:1,x:0,opacity:1}} key={i} 
+        className='2xl:text-8xl xl:text-7xl text-5xl mx-2 font-semibold hover:text-red-400'>
+          {e}
+          </motion.span>)}
+        </div>
+        <motion.p 
+        viewport={{once:true}} initial={{scale:0.9,x:50,opacity:0}} transition={{delay:0.9}} whileInView={{scale:1,x:0,opacity:1}} className='font-mono text-lg'>• A Full Stack <span className='text-red-400 animate-pulse'>Web</span> developer •</motion.p>
       </div>
       </section> 
     </>
   )
 }
-

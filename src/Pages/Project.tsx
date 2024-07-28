@@ -1,27 +1,21 @@
 import React from 'react'
 import ProjectCard from '../Components/ProjectCard'
+import { projectList } from '../Constants/projectList'
 
 export default function Project() {
   return (
-    <section id='projects' className='page bg-dark  text-white py-5 '>
-        <div className='w-full flex sm:px-5  justify-center sm:justify-normal'>
-          <ProjectCard projectName='Kick Street' navLink='kickstreet' projectLink='https://github.com/ShreyasGanesh911/kick-street'/>
-        </div>
-         
-        <div className='w-full flex sm:flex-row-reverse sm:px-5 justify-center sm:justify-normal'>
-        <ProjectCard projectName='Script Flow' navLink='scriptflow' projectLink='https://github.com/ShreyasGanesh911/kick-street'/>
-        </div>
+    <section id='projects' className='page bg-dark flex flex-col  text-white py-5 displayFlex pt-24'>
 
-        <div className='w-full flex sm:px-5 justify-center sm:justify-normal'>
-        <ProjectCard projectName='FuelCoach' navLink='fuelcoach' projectLink='https://github.com/ShreyasGanesh911/kick-street'/>
-        </div>
+      <h1 className='  text-3xl px-5 py-2 w-11/12 text-start  font-semibold  text-red-400 my-2'>Projects</h1>
 
-        <div className='w-full flex  justify-center sm:flex-row-reverse sm:px-5 sm:justify-normal'>
-        <ProjectCard projectName='Portfolio' navLink='portfolio' projectLink='https://github.com/ShreyasGanesh911/kick-street'/>
-        </div>
+        <div className='w-11/12 flex-col '>
 
-        <div className='w-full flex sm:px-5 justify-center sm:justify-normal'>
-        <ProjectCard projectName='Flask project' navLink='' projectLink='https://github.com/ShreyasGanesh911/kick-street'/>
+          {projectList.map((e,i)=>
+          <div className='w-full  flex sm:px-5  justify-center  ' key={i}>
+              <ProjectCard projectName={e.name} reverse={i%2===0 ? true:false} key={i} navLink={e.nav} projectLink={e.link}/>
+          </div>
+          )}
+
         </div>
          
          

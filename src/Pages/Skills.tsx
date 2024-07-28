@@ -6,13 +6,13 @@ const lib = ['HTML','CSS','Tailwind CSS','Framer motion','React','Flask','Node J
 const tools = ["MYSQL","Mongo DB"]
 export default function Skills() {
   return (
-    <section id='skills' className='page bg-dark text-white flex items-center justify-start flex-col'>
-      <h1 className='w-11/12 text-4xl p-2 text-start '>Skills</h1>
+    <section id='skills' className='page bg-dark text-white flex items-center justify-center flex-col'>
+      <h1 className='w-3/5 my-5 text-3xl p-2 text-start font-semibold text-red-400 '>Skills</h1>
         <div className='w-3/4 '>
-        <p className='text-lg'>
+        {/* <p className='text-lg'>
         My primary focus is writing clear and understandable code.
 
-        </p>
+        </p> */}
         </div>
 
       <div className='w-3/5 h-96 border rounded border-gray-900   font-mono ' style={{backgroundColor:"rgb(32,32,32)"}}>
@@ -21,7 +21,7 @@ export default function Skills() {
               Languages
             </motion.div>
           <div className='w-5/6  h-28 my-2 flex flex-wrap justify-start items-center'>
-          {languages.map((e)=><Card name={e}/>)}
+          {languages.map((e,i)=><Card key={i} name={e}/>)}
         </div>
           </div>
           <div className='w-100 flex'>
@@ -29,7 +29,7 @@ export default function Skills() {
               <p className='flex'>Libraries/Frameworks</p>
             </motion.div>
           <div className='w-5/6  h-28 my-2 flex flex-wrap justify-start items-center'>
-            {lib.map(e=><Card name={e}/>)}
+            {lib.map((e,i)=><Card key={i} name={e}/>)}
         </div>
           </div>
           <div className='w-100 flex'>
@@ -37,7 +37,7 @@ export default function Skills() {
             Tools/Platform
             </motion.div>
           <div className='w-5/6 h-28 my-2 flex flex-wrap justify-start items-center'>
-            {tools.map(e=><Card name={e}/>)}
+            {tools.map((e,i)=><Card key={i} name={e}/>)}
         </div>
           </div>
 
