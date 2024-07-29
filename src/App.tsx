@@ -8,7 +8,7 @@ function App() {
   return (
     <>
         <BrowserRouter>
-        {/* <Navbar/> */}
+        <Navbar/>
         <Routes>
           <Route path='/' element={<Main/>}></Route>
           <Route path='/projects/:name' element={<ProjectDetails/>}></Route>
