@@ -1,6 +1,6 @@
 {
     "KickStreet":{
-        "Title":"Kick Street",
+        "Title":"KickStreet",
         "Description" : "Kick Street is an e-commerce platform specializing in the sale of sneakers, developed using a modern tech stack that includes React for the frontend, Node.js and Express for the backend, and MongoDB for the database.The design of the user interface is simple yet effective and is designed to be responsive",
         "stack": ["React","Redux","Tailwind CSS","Node Js","Express Js","Mongo DB","Razorpay","Cloudinary","Chart Js"],
         "pictures":[
@@ -20,18 +20,23 @@
         "ProjectLink":"https://github.com/ShreyasGanesh911/kick-street"
     },
     "ScriptFlow":{
-        "Title":"Script Flow",
+        "Title":"ScriptFlow",
         "Description" : "Script Flow is an online code editor which supports multiple languages. It is a user-friendly, responsive online application that has been developed with React.",
         "stack": ["React","Tailwind CSS","Node Js","Express Js","Mongo DB"],
-        "pictures":[],
+        "pictures":[
+                "https://raw.githubusercontent.com/ShreyasGanesh911/scriptflow/master/src/Assets/Home.png"
+
+        ],
         "date":"July 2024",
         "ProjectLink":"https://github.com/ShreyasGanesh911/scriptflow"
     },
     "FuelCoach":{
-        "Title":"Fuel Coach",
+        "Title":"FuelCoach",
         "Description" : "Fuel Coach is a user-friendly diet app that simplifies the journey to a healthier lifestyle.\nBuilt with MYSQL, Node.js, Express, and React. The design is straightforward, simple to use and responsive.",
         "stack": ["React","BootStrap","Node Js","Express Js","MYSQL","Chart Js"],
-        "pictures":[],
+        "pictures":[
+            "https://raw.githubusercontent.com/ShreyasGanesh911/FuelCoach_V2/master/public/pictures/HomePage.png"
+        ],
         "date":"Feb 2024",
         "ProjectLink":"https://github.com/ShreyasGanesh911/FuelCoach_V2"
     },
