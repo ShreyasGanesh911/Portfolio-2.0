@@ -10,9 +10,10 @@ export default function SwiperMod({images}:Props) {
   return (
     <>
       <Swiper  navigation={true} modules={[Navigation]} className="w-full h-full">
-            {images.map(e=>        <SwiperSlide>
-            <div className='w-full h-full '><img className='w-full h-full object-contain' src={e} alt="" /></div>
-        </SwiperSlide>)}
+            {images.map((e,i)=>        
+            <SwiperSlide key={i}>
+              <div className='w-full h-full ' ><img  className='w-full h-full object-contain' src={e} alt="" /></div>
+           </SwiperSlide>)}
         {/* <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>

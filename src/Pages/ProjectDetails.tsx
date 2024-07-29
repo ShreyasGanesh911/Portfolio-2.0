@@ -1,32 +1,44 @@
-// import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '../Components/Card'
 import projectDescription from '../Constants/projectDesc.json'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import SwiperMod from '../Components/Swiper'
+import '../Styles/ProjectDetails.css'
 type Path = keyof typeof projectDescription
+interface ProjectDetails  {
+  title:string,
+  date:string
+}
 export default function ProjectDetails() {
   const location = useLocation()
-  // const [title,setTitle] = useState<keyof typeof projectDescription>()
-  let title = 'KickStreet' as keyof typeof projectDescription
-  let  namePath
-  // useEffect(()=>{
-  //     namePath = location.pathname.split("/")[2] as Path || "kickstreet"
-  //   console.log(namePath)
-  //   if(namePath)
-  //     setTitle(namePath)
-  // },[])
+  const navigate = useNavigate()
+  const [show,setShow] = useState<boolean>(false)
+  const [title,setTitle] = useState<Path>(location.pathname.split("/")[2] as Path)
+
+  useEffect(()=>{
+      const titleProject:Path = location.pathname.split("/")[2] as Path
+      if(projectDescription[titleProject] === undefined)
+        navigate('/')
+     
+      else{
+        setTitle(titleProject)
+        setShow(true)
+      }
+        
+  },[])
+
   return (
     <section className='page  relative bg-dark' >
-
-      <div className='fixed bg-black w-48 h-28 bottom-10 right-10 text-white rounded' style={{backgroundColor:"rgb(8,8,8)"}}>
+      {show && <>
+        <div className='sm:fixed absolute bg-black sm:w-48 z-20 w-5/6 h-28 sm:bottom-10 sm:right-10 bottom-0 text-white rounded' style={{backgroundColor:"rgb(8,8,8)"}}>
         <p className='w-full m-2'>Next project <i className="fa-solid fa-arrow-right ml-1"></i></p>
         <p className='w-full m-2 text-lg font-mono'>Kick Street</p>
       </div>
 
 
       <div className='w-full h-48 text-white flex justify-center pl-16 items-start flex-col'>
-          <p className='text-6xl w-1/4 pb-1 border-b decoration-2  hover:border-red-400 text-red-400'>{projectDescription[title].Title}</p>
-          <p className='w-1/6 text-right text-xl pt-1 font-mono hover:text-green-600'>{projectDescription[title].date}</p>
+          <p className='sm:text-6xl text-5xl w-5/6 sm:w-1/4 pb-1 border-b decoration-2  hover:border-red-400 text-red-400'>{projectDescription[title].Title}</p>
+          <p className='sm:w-1/6 w-5/6 text-right text-xl pt-1 font-mono hover:text-green-600'>{projectDescription[title].date}</p>
 
       </div>
 
@@ -34,21 +46,21 @@ export default function ProjectDetails() {
 
       <div className='w-full   flex items-center flex-col'>
 
-        <div className='w-5/6 h-80 text-white flex items-center pl-16 '>
-            <p className='w-1/3 text-justify text-lg font-sans '>{projectDescription[title].Description}</p>
+        <div className='sm:w-5/6 w-full  h-80 text-white flex items-center sm:pl-16 sm:justify-normal justify-center '>
+            <p className='sm:w-1/3 w-5/6 text-justify text-lg font-sans font-semibold'>{projectDescription[title].Description}</p>
         </div>
 
-        <div className='w-5/6 h-96  displayFlex my-5 py-2 '  style={{height:"60vh"}}>
-            <div className='w-3/4 h-full  '> 
+        <div id='SwiperDiv' className='sm:w-5/6 w-full  displayFlex my-5 py-2 '  >
+            <div className='sm:w-3/4 w-11/12 h-full  '> 
               <SwiperMod images={projectDescription[title].pictures}/>
             </div>
         </div>
 
 
-        <div className='w-5/6 h-96  text-white displayFlex flex-col'>
-          <h1 className='w-3/4 font-mono text-2xl text-red-400'>Tools Used</h1>
-            <div className='flex flex-wrap w-3/4 h-1/2 justify-between items-center text-white'>
-                {projectDescription[title].stack.map(e=><Card name={e}/>)}
+        <div className='w-5/6 sm:h-96 border text-white flex sm:justify-center items-center flex-col'>
+          <h1 className='sm:w-3/4 w-full text-center sm:text-left font-mono text-2xl text-red-400'>Tools Used</h1>
+            <div className='flex flex-wrap sm:w-3/4 w-11/12 h-1/2 justify-between items-center text-white'>
+                {projectDescription[title].stack.map((e,i)=><Card key={i} name={e}/>)}
             </div>
         </div>
         
@@ -57,6 +69,8 @@ export default function ProjectDetails() {
         </div>
 
       </div>
+      </>}
+      
     </section>
   )
 }

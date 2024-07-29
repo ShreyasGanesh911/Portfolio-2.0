@@ -7,22 +7,23 @@ type Props = {
   projectLink : string,
   navLink:string,
   reverse : boolean,
+  image:string
 }
 
-export default function ProjectCard({projectName,projectLink,navLink,reverse}:Props) {
+export default function ProjectCard({projectName,projectLink,navLink,reverse,image}:Props) {
 
     const [zoom,setZoom] = useState<boolean>(false)
   return (
     <>
       <motion.div id='projectCardContainer'  
-       whileInView={{x:0,scale:1}}  initial={{x:100,scale:0.9}}  viewport={{once:true}}  transition={{stiffness:0}} 
-       className={` my-20 relative w-full ${!reverse && 'flex-row-reverse'} rounded-xl 2xl:w-3/5 xl:w-2/3 2xl:h-96 sm:h-72 sm:flex   items-center`}
+       whileInView={{x:0,scale:1}}  initial={{x:10,scale:0.9}}  viewport={{once:true}}  transition={{stiffness:0}} 
+       className={`  sm:my-20 my-3 relative w-full ${!reverse && 'flex-row-reverse'}  2xl:w-3/5 xl:w-2/3 2xl:h-96 sm:h-72 sm:flex   items-center`}
        >
           <motion.div id='projectCardImg' whileHover={{scale:0.98}} className=' bg-yellow-200  displayFlex z-0 ' >
-          <img className='w-full h-full object-contain' src="https://raw.githubusercontent.com/ShreyasGanesh911/kick-street/master/src/Assets/Readme/desktop-home.png" alt="" />
+          <img className='w-full h-full object-contain' src={image} alt="" />
         </motion.div>
 
-        <div className={`  ${!reverse && 'flex-row-reverse'}  sm:w-1/2 w-full  h-60 sm:h-full flex   pt-10`}>
+        <div className={` ${!reverse && 'flex-row-reverse'}  sm:w-1/2 w-full  h-60 sm:h-full flex   pt-10`}>
             <div className={` ${!reverse && 'float-right'}  w-full sm:w-auto `}>
                 <p className=' w-full  sm:px-10 text-center  sm:text-left sm:p-2 2xl:text-5xl text-4xl hover:text-yellow-400' onMouseEnter={()=>setZoom(true)} onMouseLeave={()=>setZoom(false)}>
                   <span  className={`text-red-400 mx-1 ${zoom ? "2xl:text-6xl text-5xl":""} transition-all duration-500 mx-2`}>{'//'}</span>{projectName}
