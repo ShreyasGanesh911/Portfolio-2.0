@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *{
-  cursor: none;
-} */
+@media only screen and (max-width: 600px) {
+  .aboutPage {
+    background-size : 0% !important;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
