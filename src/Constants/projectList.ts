@@ -5,3 +5,10 @@ export const projectList = [
     {name:"Portfolio", link:"https://github.com/ShreyasGanesh911/Portfolio-2.0" , nav:"Portfolio",image:""},
     {name:"Flask project", link:"https://github.com/ShreyasGanesh911/kick-street" , nav:"",image:""},
   ]
+
+  export const nextProject = {
+    KickStreet : 'ScriptFlow',
+    ScriptFlow : 'FuelCoach',
+    FuelCoach : "Portfolio",
+    Portfolio: 'KickStreet'
+  }
