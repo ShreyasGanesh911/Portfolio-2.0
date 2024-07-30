@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import Card from '../Components/Card'
 import projectDescription from '../Constants/projectDesc.json'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import SwiperMod from '../Components/Swiper'
 import '../Styles/ProjectDetails.css'
+import { nextProject } from '../Constants/projectList'
 type Path = keyof typeof projectDescription
-interface ProjectDetails  {
-  title:string,
-  date:string
-}
+
 export default function ProjectDetails() {
   const location = useLocation()
   const navigate = useNavigate()
   const [show,setShow] = useState<boolean>(false)
   const [title,setTitle] = useState<Path>(location.pathname.split("/")[2] as Path)
+  const [next,setNext] = useState('')
 
   useEffect(()=>{
       const titleProject:Path = location.pathname.split("/")[2] as Path
@@ -21,8 +20,11 @@ export default function ProjectDetails() {
         navigate('/')
      
       else{
+        document.title = `${titleProject} | Shreyas`
         setTitle(titleProject)
         setShow(true)
+        const nextPrg = nextProject[title]
+        setNext(nextPrg)
       }
         
   },[])
@@ -31,8 +33,10 @@ export default function ProjectDetails() {
     <section className='page  relative bg-dark' >
       {show && <>
         <div className='sm:fixed absolute bg-black sm:w-48 z-20 w-5/6 h-28 sm:bottom-10 sm:right-10 bottom-0 text-white rounded' style={{backgroundColor:"rgb(8,8,8)"}}>
+        <Link  reloadDocument to={`/projects/${next}`}>
         <p className='w-full m-2'>Next project <i className="fa-solid fa-arrow-right ml-1"></i></p>
-        <p className='w-full m-2 text-lg font-mono'>Kick Street</p>
+        </Link>
+        <p className='w-full m-2 text-lg font-mono'>{next}</p>
       </div>
 
 

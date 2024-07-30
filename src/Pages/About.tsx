@@ -5,7 +5,9 @@ export default function About() {
   return (
     <>
     <section id='about' className='page bg-pink-200 aboutPage relative text-white flex items-center justify-around sm:flex-row flex-col-reverse '>
-      <div className='sm:absolute  bg-dark w-full h-full opacity-85' ></div>
+      <motion.div 
+        initial={{opacity:1}} whileInView={{opacity:0.85}} transition={{delay:1,duration:0.8}} viewport={{once:true}}
+      className='sm:absolute  bg-dark w-full h-full opacity-85' ></motion.div>
       <motion.div  
       whileInView={{x:0,scale:1,opacity:1}}  initial={{x:20,opacity:0}} viewport={{once:true}} transition={{stiffness:0}} 
       className=' z-10 h-full sm:w-1/3 w-11/12  flex flex-col justify-center  py-2 sm:py-0'  style={{minHeight:'60vh',height:'auto'}}>
