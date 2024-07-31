@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import SwiperMod from '../Components/Swiper'
 import '../Styles/ProjectDetails.css'
 import { nextProject } from '../Constants/projectList'
+import Loadin from './Loading'
 type Path = keyof typeof projectDescription
 
 export default function ProjectDetails() {
@@ -22,21 +23,23 @@ export default function ProjectDetails() {
       else{
         document.title = `${titleProject} | Shreyas`
         setTitle(titleProject)
-        setShow(true)
+        const myTimeOut =  setTimeout(() => setShow(true), 1000);
         const nextPrg = nextProject[title]
         setNext(nextPrg)
+        return ()=> clearTimeout(myTimeOut)
       }
         
   },[])
 
   return (
     <section className='page  relative bg-dark' >
-      {show && <>
-        <div className='sm:fixed absolute bg-black sm:w-48 z-20 w-5/6 h-28 sm:bottom-10 sm:right-10 bottom-0 text-white rounded' style={{backgroundColor:"rgb(8,8,8)"}}>
+      
+      {!show? <Loadin/>: <>
+        <div className='sm:fixed absolute displayFlex flex-col bg-black sm:w-48 z-20 w-full h-28 sm:bottom-10 sm:right-10 bottom-0 text-white rounded' style={{backgroundColor:"rgb(8,8,8)"}}>
         <Link  reloadDocument to={`/projects/${next}`}>
-        <p className='w-full m-2'>Next project <i className="fa-solid fa-arrow-right ml-1"></i></p>
+        <p className='w-full text-center sm:text-base text-xl  m-2'>Next project <i className="fa-solid fa-arrow-right ml-1"></i></p>
         </Link>
-        <p className='w-full m-2 text-lg font-mono'>{next}</p>
+        <p className='w-full sm:m-2 text-center sm:text-lg text-2xl  font-mono'>{next}</p>
       </div>
 
 
@@ -61,7 +64,7 @@ export default function ProjectDetails() {
         </div>
 
 
-        <div className='w-5/6 sm:h-96 border text-white flex sm:justify-center items-center flex-col'>
+        <div className='w-5/6 sm:h-96  text-white flex sm:justify-center items-center flex-col'>
           <h1 className='sm:w-3/4 w-full text-center sm:text-left font-mono text-2xl text-red-400'>Tools Used</h1>
             <div className='flex flex-wrap sm:w-3/4 w-11/12 h-1/2 justify-between items-center text-white'>
                 {projectDescription[title].stack.map((e,i)=><Card key={i} name={e}/>)}
