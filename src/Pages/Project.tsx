@@ -1,7 +1,6 @@
 import React from 'react'
 import ProjectCard from '../Components/ProjectCard'
 import { projectList } from '../Constants/projectList'
-
 export default function Project() {
   return (
     <section id='projects' className='page bg-dark flex flex-col  text-white py-5 displayFlex pt-24'>
