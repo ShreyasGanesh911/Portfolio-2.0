@@ -44,7 +44,7 @@
         "Title":"Portfolio",
         "Description" : "My personal portfolio website is a showcase of my web development skills and projects. Through a clean and responsive design, I present a collection of websites and web applications I've created.",
         "stack": ["React","Tailwind CSS"],
-        "pictures":["../Assets/Portfolio.png"],
+        "pictures":["https://raw.githubusercontent.com/ShreyasGanesh911/Portfolio-2.0/master/src/Assets/Portfolio.png"],
         "date":"July 2024",
         "ProjectLink":""
     }

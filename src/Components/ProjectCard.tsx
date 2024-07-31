@@ -19,7 +19,7 @@ export default function ProjectCard({projectName,projectLink,navLink,reverse,ima
        whileInView={{x:0,scale:1}}  initial={{x:10,scale:0.9}}  viewport={{once:true}}  transition={{stiffness:0}} 
        className={`  sm:my-20 my-3 relative w-full ${!reverse && 'flex-row-reverse'}  2xl:w-3/5 xl:w-2/3 2xl:h-96 sm:h-72 sm:flex   items-center`}
        >
-          <motion.div id='projectCardImg' whileHover={{scale:0.98}} className=' bg-yellow-200  displayFlex z-0 ' >
+          <motion.div id='projectCardImg' whileHover={{scale:0.99}} className='  displayFlex z-0 ' >
           <img className='w-full h-full object-contain' src={image} alt="" />
         </motion.div>
 
