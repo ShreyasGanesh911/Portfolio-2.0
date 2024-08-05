@@ -6,6 +6,7 @@ import SwiperMod from '../Components/Swiper'
 import '../Styles/ProjectDetails.css'
 import { nextProject } from '../Constants/projectList'
 import Loadin from './Loading'
+import { motion } from 'framer-motion'
 type Path = keyof typeof projectDescription
 
 export default function ProjectDetails() {
@@ -35,17 +36,19 @@ export default function ProjectDetails() {
     <section className='page  relative bg-dark' >
       
       {!show? <Loadin/>: <>
-        <div className='sm:fixed absolute displayFlex flex-col bg-black sm:w-48 z-20 w-full h-28 sm:bottom-10 sm:right-10 bottom-0 text-white rounded' style={{backgroundColor:"rgb(8,8,8)"}}>
+        <div className='sm:fixed absolute displayFlex hover:text-red-400 flex-col bg-black sm:w-48 z-20 w-full h-28 sm:bottom-10 sm:right-10 bottom-0 text-white rounded' style={{backgroundColor:"rgb(8,8,8)"}}>
         <Link  reloadDocument to={`/projects/${next}`}>
         <p className='w-full text-center sm:text-base text-xl  m-2'>Next project <i className="fa-solid fa-arrow-right ml-1"></i></p>
         </Link>
-        <p className='w-full sm:m-2 text-center sm:text-lg text-2xl  font-mono'>{next}</p>
+        <p className='w-full sm:m-2 text-center sm:text-lg text-2xl  font-mono '>{next}</p>
       </div>
 
 
       <div className='w-full h-48 text-white flex justify-center pl-16 items-start flex-col'>
           <p className='sm:text-6xl text-5xl w-5/6 sm:w-1/4 pb-1 border-b decoration-2  hover:border-red-400 text-red-400'>{projectDescription[title].Title}</p>
-          <p className='sm:w-1/6 w-5/6 text-right text-xl pt-1 font-mono hover:text-green-600'>{projectDescription[title].date}</p>
+          <motion.p className='sm:w-1/6 w-5/6 text-right text-xl pt-1 font-mono hover:text-green-600'
+            initial={{x:-20,opacity:0}} whileInView={{x:0,opacity:100}} transition={{duration:0.3}}
+          >{projectDescription[title].date}</motion.p>
 
       </div>
 
@@ -53,9 +56,11 @@ export default function ProjectDetails() {
 
       <div className='w-full   flex items-center flex-col'>
 
-        <div className='sm:w-5/6 w-full  h-80 text-white flex items-center sm:pl-16 sm:justify-normal justify-center '>
+        <motion.div
+          initial={{y:80,opacity:0}} whileInView={{y:0,opacity:100}} transition={{duration:0.5}}
+        className='sm:w-5/6 w-full  h-80 text-white flex items-center sm:pl-16 sm:justify-normal justify-center '>
             <p className='sm:w-1/3 w-5/6 text-justify text-lg font-sans font-semibold'>{projectDescription[title].Description}</p>
-        </div>
+        </motion.div>
 
         <div id='SwiperDiv' className='sm:w-5/6 w-full  displayFlex my-5 py-2 '  >
             <div className='sm:w-3/4 w-11/12 h-full  '> 
