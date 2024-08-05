@@ -47,7 +47,7 @@ export default function ProjectDetails() {
       <div className='w-full h-48 text-white flex justify-center pl-16 items-start flex-col'>
           <p className='sm:text-6xl text-5xl w-5/6 sm:w-1/4 pb-1 border-b decoration-2  hover:border-red-400 text-red-400'>{projectDescription[title].Title}</p>
           <motion.p className='sm:w-1/6 w-5/6 text-right text-xl pt-1 font-mono hover:text-green-600'
-            initial={{x:-20,opacity:0}} whileInView={{x:0,opacity:100}} transition={{duration:0.3}}
+            initial={{x:-20,opacity:0}} whileInView={{x:0,opacity:100}} transition={{duration:0.3}} viewport={{once:true}}
           >{projectDescription[title].date}</motion.p>
 
       </div>
@@ -57,7 +57,7 @@ export default function ProjectDetails() {
       <div className='w-full   flex items-center flex-col'>
 
         <motion.div
-          initial={{y:80,opacity:0}} whileInView={{y:0,opacity:100}} transition={{duration:0.5}}
+          initial={{y:80,opacity:0}} whileInView={{y:0,opacity:100}} transition={{duration:0.5}} viewport={{once:true}}
         className='sm:w-5/6 w-full  h-80 text-white flex items-center sm:pl-16 sm:justify-normal justify-center '>
             <p className='sm:w-1/3 w-5/6 text-justify text-lg font-sans font-semibold'>{projectDescription[title].Description}</p>
         </motion.div>
