@@ -11,7 +11,7 @@ export default function Project() {
 
           {projectList.map((e,i)=>
           <div className='w-full  flex sm:px-5  justify-center  ' key={i}>
-              <ProjectCard image={e.image} projectName={e.name} reverse={i%2===0 ? true:false} key={i} navLink={e.nav} projectLink={e.link}/>
+              <ProjectCard  desc={e.desc} image={e.image} projectName={e.name} reverse={i%2===0 ? true:false} key={i} navLink={e.nav} projectLink={e.link}/>
           </div>
           )}
 

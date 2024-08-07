@@ -35,12 +35,16 @@ export default function ProjectDetails() {
   return (
     <section className='page  relative bg-dark' >
       
-      {!show? <Loadin/>: <>
-        <div className='sm:fixed absolute displayFlex hover:text-red-400 flex-col bg-black sm:w-48 z-20 w-full h-28 sm:bottom-10 sm:right-10 bottom-0 text-white rounded' style={{backgroundColor:"rgb(8,8,8)"}}>
+      {!show? <Loadin/>: 
+      <>
+        <div className='fixed  displayFlex hover:text-red-400 flex-col bg-black sm:w-48 z-20 sm:h-28  h-10 sm:bottom-10 sm:right-10 bottom-5 right-5 text-white rounded' style={{backgroundColor:"rgb(8,8,8)"}}>
         <Link  reloadDocument to={`/projects/${next}`}>
-        <p className='w-full text-center sm:text-base text-xl  m-2'>Next project <i className="fa-solid fa-arrow-right ml-1"></i></p>
+        <p className='w-full text-center sm:text-base  text-sm  sm:m-2 sm:p-0 p-2'>
+          <span className='sm:inline-block mr-2 hidden'> Next project</span>
+            <span className='sm:hidden mx-2'>{next}</span>
+           <i className="fa-solid fa-arrow-right ml-1"></i></p>
         </Link>
-        <p className='w-full sm:m-2 text-center sm:text-lg text-2xl  font-mono '>{next}</p>
+        <p className='w-full sm:m-2 text-center sm:text-lg text-2xl hidden  sm:block font-mono '>{next}</p>
       </div>
 
 
@@ -58,8 +62,8 @@ export default function ProjectDetails() {
 
         <motion.div
           initial={{y:80,opacity:0}} whileInView={{y:0,opacity:100}} transition={{duration:0.5}} viewport={{once:true}}
-        className='sm:w-5/6 w-full  h-80 text-white flex items-center sm:pl-16 sm:justify-normal justify-center '>
-            <p className='sm:w-1/3 w-5/6 text-justify text-lg font-sans font-semibold'>{projectDescription[title].Description}</p>
+        className='sm:w-5/6 w-full sm:border-l  border-yellow-400 h-80 text-white flex items-center sm:pl-16 sm:justify-normal justify-center '>
+            <p className='sm:w-1/3 w-5/6 text-justify text-lg font-sans font-semibold '>{projectDescription[title].Description}</p>
         </motion.div>
 
         <div id='SwiperDiv' className='sm:w-5/6 w-full  displayFlex my-5 py-2 '  >
@@ -71,13 +75,13 @@ export default function ProjectDetails() {
 
         <div className='w-5/6 sm:h-96  text-white flex sm:justify-center items-center flex-col'>
           <h1 className='sm:w-3/4 w-full text-center sm:text-left font-mono text-2xl text-red-400'>Tools Used</h1>
-            <div className='flex flex-wrap sm:w-3/4 w-11/12 h-1/2 justify-between items-center text-white'>
+            <div className='flex flex-wrap sm:w-3/4 w-11/12 h-1/2 justify-start items-center text-white'>
                 {projectDescription[title].stack.map((e,i)=><Card key={i} name={e}/>)}
             </div>
         </div>
         
         <div className='w-5/6 h-40  text-white displayFlex'>
-            <button className='py-3 px-4 hover:bg-black bg-slate-950 rounded relative hover:-translate-y-2 duration-300'><a href={projectDescription[title].ProjectLink}  rel="noreferrer" target='_blank'>Project source code</a></button>
+            <button className='py-4 px-5 hover:bg-black bg-slate-950 rounded text-xl text-red-400 relative hover:-translate-y-2 duration-300'><a href={projectDescription[title].ProjectLink}  rel="noreferrer" target='_blank'>Project source code</a></button>
         </div>
 
       </div>

@@ -52,8 +52,8 @@ export default function Navbar() {
        <ul className="sm:flex hidden  mr-14">
         {list.map((e,i)=>
         <li key={i} className="mx-8 relative  hover:border-cyan-400 text-slate-300 hover:text-white ">
-          <p className="text-xs text-cyan-500 font-mono text-end">0{i+1}</p>
-          <a href={e.href} className="capitalize" aria-current="page"><span className="mr-1 text-cyan-500">{'//'}</span>{e.text}</a>
+          <p className="text-xs text-cyan-500 font-mono text-end opacity-70">0{i+1}</p>
+          <a href={e.href} className="capitalize" aria-current="page"><span className="mr-1 text-cyan-500 opacity-70">{'//'}</span>{e.text}</a>
         </li>
         )}
        </ul>

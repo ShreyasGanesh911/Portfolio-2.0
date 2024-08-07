@@ -6,10 +6,11 @@ type Props = {
   projectLink : string,
   navLink:string,
   reverse : boolean,
-  image:string
+  image:string,
+  desc:string
 }
 
-export default function ProjectCard({projectName,projectLink,navLink,reverse,image}:Props) {
+export default function ProjectCard({projectName,projectLink,navLink,reverse,image,desc}:Props) {
 
   return (
     <>
@@ -28,7 +29,8 @@ export default function ProjectCard({projectName,projectLink,navLink,reverse,ima
                 </p>
                 <p 
                 className={`w-full text-justify text-base  transition-all duration-200 my-2 sm:my-5 sm:w-3/4 displayFlex `}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa maxime tempora inventore laboriosam, ipsum illo iusto fugit similique quod ullam?</p>
+                 {desc}
+                 </p>
                 <div  className='  sm:w-3/4 w-full h-32  sm:h-52 flex sm:mt-0 mt-5  flex-col justify-evenly items-center'>
                   <a href={projectLink} target='_blank' rel='noreferrer' className=' border-b border-red-400 hover:border-red-700 duration-300 transition-all   w-1/3 displayFlex py-3 px-2 text-lg '><i className="fa-brands fa-github  mx-1"></i>Project</a>
                   <Link to={`/projects/${navLink}`} target='_blank' rel='noreferrer' className='border-b border-red-400 hover:border-red-700 displayFlex w-1/3 py-3 text-lg px-2 '><i className="fa-solid fa-arrow-up-right-from-square mx-1"></i>More</Link>
