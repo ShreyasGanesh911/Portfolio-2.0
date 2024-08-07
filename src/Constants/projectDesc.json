@@ -1,8 +1,8 @@
 {
     "KickStreet":{
         "Title":"KickStreet",
-        "Description" : "Kick Street is an e-commerce platform specializing in the sale of sneakers, developed using a modern tech stack that includes React for the frontend, Node.js and Express for the backend, and MongoDB for the database.The design of the user interface is simple yet effective and is designed to be responsive",
-        "stack": ["React","Redux","Tailwind CSS","Node Js","Express Js","Mongo DB","Razorpay","Cloudinary","Chart Js"],
+        "Description" : "Kick Street is an e-commerce platform specializing in the sale of sneakers, developed using MERN stack. The design of the user interface is simple, easy-to-navigate ,effective and is designed to be responsive. Integrated with Cloudinary for image storage and Razorpay for payment processing.",
+        "stack": ["React","Redux","Tailwind CSS","Node Js","Express Js","Mongo DB","Razorpay","Cloudinary","Chart Js","Multer"],
         "pictures":[
             "https://raw.githubusercontent.com/ShreyasGanesh911/kick-street/master/src/Assets/Readme/desktop-home.png",
             "https://raw.githubusercontent.com/ShreyasGanesh911/kick-street/master/src/Assets/Readme/desktop-product.png",
@@ -21,10 +21,15 @@
     },
     "ScriptFlow":{
         "Title":"ScriptFlow",
-        "Description" : "Script Flow is an online code editor which supports multiple languages. It is a user-friendly, responsive online application that has been developed with React.",
+        "Description" : "ScriptFlow is an easy-to-use online code editor where you can write and run your code all in one place. With ScriptFlow, you don’t need to set up anything on your computer—just type your code and see the results instantly. It supports various programming languages and lets you see changes live as you work, making it perfect for learning quickly.",
         "stack": ["React","Tailwind CSS","Node Js","Express Js","Mongo DB"],
         "pictures":[
-                "https://raw.githubusercontent.com/ShreyasGanesh911/scriptflow/master/src/Assets/Home.png"
+                "https://raw.githubusercontent.com/ShreyasGanesh911/scriptflow/master/src/Assets/Home.png",
+               
+                "https://raw.githubusercontent.com/ShreyasGanesh911/scriptflow/master/src/Assets/Playground.png",
+                "https://raw.githubusercontent.com/ShreyasGanesh911/scriptflow/master/src/Assets/Account.png",
+                "https://raw.githubusercontent.com/ShreyasGanesh911/scriptflow/master/src/Assets/account_snippet.png",
+                "https://raw.githubusercontent.com/ShreyasGanesh911/scriptflow/master/src/Assets/snippet.png"
 
         ],
         "date":"July 2024",
@@ -32,17 +37,23 @@
     },
     "FuelCoach":{
         "Title":"FuelCoach",
-        "Description" : "Fuel Coach is a user-friendly diet app that simplifies the journey to a healthier lifestyle.\nBuilt with MYSQL, Node.js, Express, and React. The design is straightforward, simple to use and responsive.",
+        "Description" : "Fuel Coach is a user-friendly diet app that simplifies the journey to a healthier lifestyle.\nBuilt with MYSQL, Node.js, Express, and React. The design is straightforward and simple to use.\n Fuel Coach calculates a maintenance calorie based on the user's height, weight, and activity level in order to help them reach their goal.\n Integrated with fast API to fetch food data and store it to track calories.",
         "stack": ["React","BootStrap","Node Js","Express Js","MYSQL","Chart Js"],
         "pictures":[
-            "https://raw.githubusercontent.com/ShreyasGanesh911/FuelCoach_V2/master/public/pictures/HomePage.png"
+            "https://raw.githubusercontent.com/ShreyasGanesh911/FuelCoach_V2/master/public/pictures/HomeNew.png",
+            "https://raw.githubusercontent.com/ShreyasGanesh911/FuelCoach_V2/master/public/pictures/LandingPage.png",
+            "https://raw.githubusercontent.com/ShreyasGanesh911/FuelCoach_V2/master/public/pictures/FoodSearch.png",
+            "https://raw.githubusercontent.com/ShreyasGanesh911/FuelCoach_V2/master/public/pictures/Food%20Log.png",
+            "https://raw.githubusercontent.com/ShreyasGanesh911/FuelCoach_V2/master/public/pictures/Blog.png",
+            "https://raw.githubusercontent.com/ShreyasGanesh911/FuelCoach_V2/master/public/pictures/About.png"
+
         ],
         "date":"Feb 2024",
         "ProjectLink":"https://github.com/ShreyasGanesh911/FuelCoach_V2"
     },
     "Portfolio":{
         "Title":"Portfolio",
-        "Description" : "My personal portfolio website is a showcase of my web development skills and projects. Through a clean and responsive design, I present a collection of websites and web applications I've created.",
+        "Description" : "My personal portfolio website is a highlight of my web development skills and projects. Through a clean and responsive design, I present a collection of websites and web applications I've created. Built using React, Tailwind CSS and Framer Motion.",
         "stack": ["React","Tailwind CSS"],
         "pictures":["https://raw.githubusercontent.com/ShreyasGanesh911/Portfolio-2.0/master/src/Assets/Portfolio.png"],
         "date":"July 2024",
