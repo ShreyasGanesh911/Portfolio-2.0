@@ -54,9 +54,9 @@
     "Portfolio":{
         "Title":"Portfolio",
         "Description" : "My personal portfolio website is a highlight of my web development skills and projects. Through a clean and responsive design, I present a collection of websites and web applications I've created. Built using React, Tailwind CSS and Framer Motion.",
-        "stack": ["React","Tailwind CSS"],
+        "stack": ["React","Tailwind CSS","Framer Motion"],
         "pictures":["https://raw.githubusercontent.com/ShreyasGanesh911/Portfolio-2.0/master/src/Assets/Portfolio.png"],
         "date":"July 2024",
-        "ProjectLink":""
+        "ProjectLink":"https://github.com/ShreyasGanesh911/Portfolio-2.0"
     }
 }
