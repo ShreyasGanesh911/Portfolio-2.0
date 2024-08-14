@@ -1,12 +1,11 @@
 import { motion } from "framer-motion"
 
 //import images from '../Assets/Map.png'
-// const contactList = [
-//   {name:"GitHub",url:""},
-//   {name:"Linkdin",url:""},
-//   {name:"shreyas.ganesh911@gmail.com",url:"shreyas.ganesh911@gmail.com"},
-//   {name:"Reddit",url:"shreyas.ganesh911@gmail.com"},
-// ]
+const contactList = [
+  {name:"GitHub",url:"https://github.com/ShreyasGanesh911",favicon:"fa-brands fa-github"},
+  {name:"Linkdin",url:"https://www.linkedin.com/in/shreyas-montadka",favicon:"fa-brands fa-linkedin"},
+  {name:"Reddit",url:"https://www.reddit.com/u/aviator_02/s/83REFyz5nM",favicon:'fa-brands fa-square-reddit'},
+]
 
 export default function Footer() {
   return (
@@ -24,11 +23,12 @@ export default function Footer() {
         initial={{scale:0.98,opacity:0,y:50}} whileInView={{scale:1,opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.8}} 
       className="h-5/6 sm:w-1/4 w-full text-white displayFlex  ">
         <ul className=" flex sm:block sm:w-auto w-full  items-center justify-evenly sm:my-0 my-12">
-          <li className="my-2 sm:text-xl text-2xl hover:text-red-400 "><i className="fa-brands fa-github mx-2"></i><span className="sm:inline-block hidden">Github</span></li>
-          <li className="my-2 sm:text-xl text-2xl hover:text-red-400 "><i className="fa-brands fa-linkedin mx-2"></i><span className="sm:inline-block hidden">Linkdin</span></li>
-          <li className="my-2 sm:text-xl text-2xl hover:text-red-400 "><i className="fa-solid fa-envelope mx-2"></i><span className="sm:inline-block hidden">Mail</span></li>
-          <li className="my-2 sm:text-xl text-2xl hover:text-red-400 "><i className="fa-brands fa-discord mx-2"></i><span className="sm:inline-block hidden">Discord</span></li>
-          
+        {contactList.map((e)=><>
+          <li className="my-2 sm:text-xl text-2xl hover:text-red-400 ">
+            <a href={e.url} target="_blank" rel="noreferrer"><i className={`${e.favicon} mx-2`}></i><span className="sm:inline-block hidden">{e.name}</span></a>
+          </li>
+        </>)}
+          <li className="my-2 sm:text-xl text-2xl hover:text-red-400 "><a href="mailto:shreyas.ganesh911@gmail.com"><i className="fa-solid fa-envelope mx-2"></i><span className="sm:inline-block hidden">Mail</span></a></li>
         </ul>
       </motion.div>
     </div>
