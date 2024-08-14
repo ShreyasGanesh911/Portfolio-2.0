@@ -7,7 +7,7 @@ export default function Landing() {
     <>
      <section id='landing' className='page bg-dark  relative text-white displayFlex'>
       <DrawContainer/>
-     <div className='z-10  sm:w-auto h-auto w-11/12 cursor-default flex justify-start items-center pt-5 flex-col'>
+     <div className='z-10  sm:w-auto h-auto w-full cursor-default flex justify-start items-center pt-5 flex-col'>
         <p className='sm:w-full w-5/6 text-2xl'>
           <motion.span 
             viewport={{once:true}} initial={{scale:9,opacity:0}} whileInView={{scale:1,x:0,opacity:1}}  
