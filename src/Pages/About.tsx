@@ -17,7 +17,7 @@ export default function About() {
       </p>
      
       <div className='w-full flex  mt-5 px-3 '>
-          <button className='border rounded px-1 w-32 py-2 hover:border-red-400 hover:text-red-400 hover:-translate-y-2 transition-all duration-300'><a href={require( '../Assets/ShreyasResumeFinal.pdf')} target='_blank' rel="noreferrer"><i className="fa-solid fa-file mx-1"></i>Resume</a></button>
+          <button className='border rounded px-1 w-32 py-2 hover:border-red-400 hover:text-red-400 hover:-translate-y-2 transition-all duration-300'><a href={require( '../Assets/ShreyasMontadka.pdf')} target='_blank' rel="noreferrer"><i className="fa-solid fa-file mx-1"></i>Resume</a></button>
           <button className='border rounded px-1 w-32 py-2 mx-10 hover:border-red-400 hover:text-red-400 hover:-translate-y-2 transition-all duration-300'><a href="https://github.com/ShreyasGanesh911" target='_blank' rel="noreferrer"><i className="fa-brands fa-github  mx-1"></i>Github</a></button>
 
       </div>
