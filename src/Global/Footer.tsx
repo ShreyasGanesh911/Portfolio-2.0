@@ -23,11 +23,11 @@ export default function Footer() {
         initial={{scale:0.98,opacity:0,y:50}} whileInView={{scale:1,opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.8}} 
       className="h-5/6 sm:w-1/4 w-full text-white displayFlex  ">
         <ul className=" flex sm:block sm:w-auto w-full  items-center justify-evenly sm:my-0 my-12">
-        {contactList.map((e)=><>
+        {contactList.map((e,i)=><div key={i}>
           <li className="my-2 sm:text-xl text-2xl hover:text-red-400 ">
             <a href={e.url} target="_blank" rel="noreferrer"><i className={`${e.favicon} mx-2`}></i><span className="sm:inline-block hidden">{e.name}</span></a>
           </li>
-        </>)}
+        </div>)}
           <li className="my-2 sm:text-xl text-2xl hover:text-red-400 "><a href="mailto:shreyas.ganesh911@gmail.com"><i className="fa-solid fa-envelope mx-2"></i><span className="sm:inline-block hidden">Mail</span></a></li>
         </ul>
       </motion.div>
