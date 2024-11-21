@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../Components/Card'
 import { motion } from 'framer-motion'
 const languages = ["java","javaScript",'typeScript','solidity']
-const lib = ['HTML','CSS','Tailwind CSS','BootStrap','Framer motion','React','Next Js','Node Js','Express Js','GraphQL']
+const lib = ['HTML','CSS','Tailwind CSS','BootStrap','Framer motion','React','Next Js','Node Js','Express Js','GraphQL','Puppeteer']
 const tools = ["MYSQL","Mongo DB"]
 export default function Skills() {
   return (
