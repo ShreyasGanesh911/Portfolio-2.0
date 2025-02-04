@@ -1,9 +1,7 @@
 import React from 'react'
 import Card from '../Components/Card'
 import { motion } from 'framer-motion'
-const languages = ["java","javaScript",'typeScript','solidity']
-const lib = ['HTML','CSS','Tailwind CSS','BootStrap','Framer motion','React','Next Js','Node Js','Express Js','GraphQL','Puppeteer']
-const tools = ["MYSQL","Mongo DB"]
+import { languages, lib, tools } from '../Constants/Skills'
 export default function Skills() {
   return (
     <section id='skills' className='page bg-dark text-white flex items-center justify-center flex-col'>
