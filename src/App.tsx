@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes ,Route} from 'react-router-dom';
+import { BrowserRouter, Routes ,Route, Navigate} from 'react-router-dom';
 import Navbar from './Global/Navbar';
 import Footer from './Global/Footer';
 import Main from './Pages/Main';
@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main/>}></Route>
           <Route path='/projects/:name' element={<ProjectDetails/>}></Route>
+          <Route path='*' element={<Navigate to="/" replace />}></Route>
         </Routes>
         <Footer/>
         </BrowserRouter>
