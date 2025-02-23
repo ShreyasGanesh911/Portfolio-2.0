@@ -7,6 +7,7 @@ import '../Styles/ProjectDetails.css'
 import { nextProject } from '../Constants/projectList'
 import Loadin from './Loading'
 import { motion } from 'framer-motion'
+import { Helmet } from 'react-helmet-async'
 type Path = keyof typeof projectDescription
 
 export default function ProjectDetails() {
@@ -34,7 +35,11 @@ export default function ProjectDetails() {
 
   return (
     <section className='page  relative bg-dark' >
-      
+      <Helmet>
+      <title>{projectDescription[title].Title} | Shreyas Montadka Portfolio</title>
+      <meta name="description" content={projectDescription[title].Description} />
+      <meta name="keywords" content={`${projectDescription[title].Title}, portfolio, full stack, web development, ${projectDescription[title].stack.join(', ')}`} />
+      </Helmet>
       {!show? <Loadin/>: 
       <>
         <div className='fixed  displayFlex hover:text-red-400 flex-col bg-black sm:w-48 z-20 sm:h-28  h-10 sm:bottom-10 sm:right-10 bottom-5 right-5 text-white rounded' style={{backgroundColor:"rgb(8,8,8)"}}>
