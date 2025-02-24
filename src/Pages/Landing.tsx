@@ -12,9 +12,9 @@ export default function Landing() {
         <meta name="keywords" content="Shreyas Montadka, full stack developer, portfolio, web development, react, node.js, javascript, html, css" />
         
         
-        <meta property="og:title" content="Shreyas Montadka | Full Stack Developer Portfolio" />
+        <meta property="og:title" content="Shreyas Montadka" />
         <meta property="og:description" content="Explore the portfolio of Shreyas Montadka, a skilled full-stack web developer with expertise in modern web technologies." />
-        <meta property="og:image" content="%PUBLIC_URL%/images/portfolio-thumbnail.jpg" />
+        <meta property="og:image" content="%PUBLIC_URL%/favicon.ico" />
         <meta property="og:url" content="https://sgdev.online" />
         <meta property="og:type" content="website" />
     </Helmet>
