@@ -1,5 +1,12 @@
 export const projectList = [
     {
+      name:"Devtutor",
+      link:"https://github.com/ShreyasGanesh911/Devtutor",
+      nav:"Devtutor",
+      image:"https://github.com/ShreyasGanesh911/Devtutor/blob/master/public/About.png?raw=true",
+      desc:"Developed a realtime code tutor application using GPT's Reatime-API, giving a one on one learning experience."
+    },
+    {
       name:"Kick Street", 
       nav:"KickStreet" , 
       link:"https://github.com/ShreyasGanesh911/kick-street",
@@ -31,8 +38,9 @@ export const projectList = [
   ]
 
   export const nextProject = {
+    Devtutor:"KickStreet",
     KickStreet : 'ScriptFlow',
     ScriptFlow : 'FuelCoach',
     FuelCoach : "Portfolio",
-    Portfolio: 'KickStreet'
+    Portfolio: 'Devtutor'
   }

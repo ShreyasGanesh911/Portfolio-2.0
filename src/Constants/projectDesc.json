@@ -1,4 +1,16 @@
 {
+    "Devtutor":{
+        "Title":"Devtutor",
+        "Description" : "DevTutor is an intelligent coding education platform that combines real-time AI chat with an integrated code editor to provide an immersive learning experience.",
+        "stack": ["Next Js","Tailwind CSS","GPT-4o","Realtime-API"],
+        "pictures":[
+            "https://github.com/ShreyasGanesh911/Devtutor/blob/master/public/About.png?raw=true",
+            "https://github.com/ShreyasGanesh911/Devtutor/blob/master/public/Intro.png?raw=true",
+            "https://github.com/ShreyasGanesh911/Devtutor/blob/master/public/Working.png?raw=true"
+        ],
+        "date":"May 2025",
+        "ProjectLink":"https://github.com/ShreyasGanesh911/Devtutor"
+    },
     "KickStreet":{
         "Title":"KickStreet",
         "Description" : "Kick Street is an e-commerce platform specializing in the sale of sneakers, developed using MERN stack. The design of the user interface is simple, easy-to-navigate ,effective and is designed to be responsive. Integrated with Cloudinary for image storage and Razorpay for payment processing.",
